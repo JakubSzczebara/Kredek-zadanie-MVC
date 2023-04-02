@@ -6,6 +6,6 @@ namespace SklepInternetowy.Repositories
     {
         List<Item> getAll();
         Item GetItem(int id);
-        List<Item> getItems(string category);
+        List<Item> getItems(int category);
     }
 }
