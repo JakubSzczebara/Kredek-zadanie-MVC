@@ -1,0 +1,17 @@
+﻿@model SklepInternetowy.Models.Item
+
+@{
+    ViewData["title"] = "Szczegóły produktu";
+}
+
+<h1>Szczegóły Produktu</h1>
+<h4>@Model.Name</h4>
+<h4>Numer: @Model.Id</h4>
+<img src="~/images/@Model.Image" class="rounded" style="height: 20rem; width: 35rem" />
+<h5>Opis produktu</h5>
+<p>@Model.Description</p>
+<h5>cena: @Model.Price</h5>
+<hr />
+<a asp-action="Shop">Powrót do sklepu</a>
+<a href="javascript:void(0);" onclick="history.go(-1);">Powrót do kategori</a>
+

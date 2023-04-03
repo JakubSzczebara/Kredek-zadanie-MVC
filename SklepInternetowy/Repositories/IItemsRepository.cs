@@ -5,7 +5,7 @@ namespace SklepInternetowy.Repositories
     public interface IItemsRepository
     {
         List<Item> getAll();
-        Item GetItem(int id);
+        Item getItem(int id);
         List<Item> getItems(int category);
     }
 }

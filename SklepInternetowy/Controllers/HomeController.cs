@@ -24,6 +24,18 @@ namespace SklepInternetowy.Controllers
             return View(items);
         }
 
+        public IActionResult ItemDetails(int id)
+        {
+            var item=_ItemsRepository.getItem(id);
+            return View(item);
+        }
+
+        public IActionResult ItemFiltred(int id)
+        {
+            var items=_ItemsRepository.getItems(id);
+            return View(items);
+        }
+
         public IActionResult Privacy()
         {
             return View();

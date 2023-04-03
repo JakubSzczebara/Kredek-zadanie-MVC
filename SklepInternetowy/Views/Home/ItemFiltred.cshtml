@@ -5,12 +5,13 @@
 }
 <h1>Oferta</h1>
 
-<ul>
-    Dostęne kategorie
-    <li>@Html.ActionLink("pierwsza", "ItemFiltred", new{id=1})</li>
-    <li>@Html.ActionLink("druga", "ItemFiltred", new{id=2})</li>
-    <li>@Html.ActionLink("trzecia", "ItemFiltred", new{id=3})</li>
-</ul>
+<h3>Aktualna kategoria: @{
+    var number = Model.ElementAt(0).Category;
+    // var number = Model.First<Item>().Category;
+    }
+    @number
+</h3>
+<a asp-action="Shop">Powrót</a>
 
 <table class="table">
     <thead>
